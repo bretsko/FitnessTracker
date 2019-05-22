@@ -12,7 +12,6 @@ class NewRunController: UIViewController {
 	// MARK: IBOutlets
 	
 	@IBOutlet weak var startButton: UIButton!
-	@IBOutlet weak var stopButton: UIButton!
 	@IBOutlet weak var mapView: MKMapView!
 	@IBOutlet weak var sliderBackground: UIView!
 	@IBOutlet weak var slider: UISlider!
@@ -58,9 +57,7 @@ class NewRunController: UIViewController {
 		setupMap()
 		HealthKitManager.getWeight { w in
 			DispatchQueue.main.async {
-				self.weight = w
-				self.startButton.isEnabled = true
-				self.startButton.alpha = 1
+                self.weight = w
 			}
 		}
 		
@@ -86,13 +83,12 @@ class NewRunController: UIViewController {
 	
 	// MARK: - Manage Run Start
 	
-	@IBAction func handleStartPauseResumeTapped() {
+	@IBAction func handleStartStopTapped() {
 		if !didStart {
 			startRun()
-		} else if run.paused {
-			resumeRun()
+            startButton.setTitle("Stop", for: .normal)
 		} else {
-			pauseRun()
+            handleStopTapped()
 		}
 	}
 	
@@ -101,15 +97,7 @@ class NewRunController: UIViewController {
 			return
 		}
 		
-		UIView.animate(withDuration: 0.60, animations: {
-			self.view.layoutIfNeeded()
-			self.stopButton.alpha = 1.0
-		}) { (finished) in
-			self.stopButton.isEnabled = true
-		}
-		
 		run = RunBuilder(start: Date(), activityType: activityType, weight: weight)
-		updatePauseStatus()
 		timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
 		if let prev = previousLocation {
 			self.locationManager(locationManager, didUpdateLocations: [prev])
@@ -117,17 +105,6 @@ class NewRunController: UIViewController {
 		}
 	}
 	
-	// MARK: - Manage Run Pause
-	
-	private func pauseRun() {
-		run.pause(Date())
-		updatePauseStatus()
-	}
-	
-	private func resumeRun() {
-		mapView.addOverlays(run.resume(Date()))
-		updatePauseStatus()
-	}
 	
 	// MARK: - Manage Run Stop
 	
@@ -169,7 +146,6 @@ class NewRunController: UIViewController {
 				return
 			}
 		}
-		
 		manualStop()
 	}
 	
@@ -215,21 +191,8 @@ class NewRunController: UIViewController {
 		details.update(for: run?.run)
 	}
 	
-	private func updatePauseStatus() {
-		guard didStart else {
-			return
-		}
-		
-		startButton.setTitle(run.paused ? "Resume" : "Pause", for: [])
-	}
-	
 	private func setupViews() {
-		stopButton.isEnabled = false
-		stopButton.alpha = 0.5
-		startButton.isEnabled = false
-		stopButton.alpha = 0.5
-		
-		for v in [sliderBackground!, startButton!, stopButton!] {
+		for v in [sliderBackground!, startButton!] {
 			v.layer.cornerRadius = v.frame.height/2
 			v.layer.masksToBounds = true
 		}
@@ -301,8 +264,7 @@ extension NewRunController: CLLocationManagerDelegate {
 		} else if let loc = locations.last {
 			previousLocation = loc
 		}
-	}
-	
+	}	
 }
 
 // MARK: - DismissDelegate

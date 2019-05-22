@@ -7,9 +7,6 @@ class PastRunsListController: UITableViewController {
 	
 	private let batchSize = 40
 	private var moreToBeLoaded = false
-	private var isLoadingMore = false
-	
-	private weak var loadMoreCell: LoadMoreCell?
     
     private var runs: [CompletedRun] = []
     private let cellIdentifier = "RunTableCell"
@@ -18,7 +15,6 @@ class PastRunsListController: UITableViewController {
 	override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        setupNavigationBar()
 		loadData()
     }
 	
@@ -44,13 +40,6 @@ class PastRunsListController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		if indexPath.section == 1 {
-			let cell = tableView.dequeueReusableCell(withIdentifier: LoadMoreCell.identifier, for: indexPath) as! LoadMoreCell
-			loadMoreCell = cell
-			cell.isEnabled = !isLoadingMore
-			
-			return cell
-		}
 		
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RunTableCell
         let run = runs[indexPath.row]
@@ -63,10 +52,6 @@ class PastRunsListController: UITableViewController {
     }
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		if indexPath.section == 1, loadMoreCell?.isEnabled ?? false {
-			loadMoreCell?.isEnabled = false
-			loadData()
-		}
 		
 		tableView.deselectRow(at: indexPath, animated: true)
 	}
@@ -74,8 +59,7 @@ class PastRunsListController: UITableViewController {
 	// MARK: - UI
 	
 	private func loadData() {
-		isLoadingMore = true
-		loadMoreCell?.isEnabled = false
+
 		
 		let filter = HKQuery.predicateForObjects(from: HKSource.default())
 		let limit: Int
@@ -122,11 +106,9 @@ class PastRunsListController: UITableViewController {
 					}
 					
 					self.tableView.beginUpdates()
-					self.isLoadingMore = false
 					if let added = addLineCount {
 						let oldCount = self.tableView.numberOfRows(inSection: 0)
 						self.tableView.insertRows(at: (oldCount ..< (oldCount + added)).map { IndexPath(row: $0, section: 0) }, with: .automatic)
-						self.loadMoreCell?.isEnabled = true
 					} else {
 						self.tableView.reloadSections([0], with: .automatic)
 					}

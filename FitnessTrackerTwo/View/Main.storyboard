@@ -14,7 +14,7 @@
         <!--Home Controller-->
         <scene sceneID="R02-lz-uXg">
             <objects>
-                <viewController id="u7X-Os-Fjy" customClass="HomeController" customModule="InfinityTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="u7X-Os-Fjy" customClass="HomeController" customModule="FitnessTrackerTwo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="exj-AN-ov9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,7 +75,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4a-xm-Tob">
                                         <rect key="frame" x="27.5" y="15" width="320" height="60"/>
-                                        <color key="backgroundColor" red="0.062170670074557684" green="0.38925424528696412" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.58221136890000003" green="0.50164488309999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="PpJ-IK-vo3"/>
@@ -177,7 +177,7 @@
         <!--New Run Controller-->
         <scene sceneID="j6b-q6-It7">
             <objects>
-                <viewController id="SHz-c9-6Uc" customClass="NewRunController" customModule="InfinityTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SHz-c9-6Uc" customClass="NewRunController" customModule="FitnessTrackerTwo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EN4-U5-yty">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,22 +206,8 @@
                                     <constraint firstItem="UHy-RL-tVu" firstAttribute="leading" secondItem="UUN-9p-riM" secondAttribute="leading" constant="16" id="ywz-m0-EUO"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIx-ce-8MX">
-                                <rect key="frame" x="197.5" y="587" width="161.5" height="60"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="ag6-aq-Hvd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Stop">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="handleStopTapped" destination="SHz-c9-6Uc" eventType="primaryActionTriggered" id="roa-aP-cMv"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mq6-tB-9ZQ">
-                                <rect key="frame" x="16" y="587" width="161.5" height="60"/>
+                                <rect key="frame" x="16" y="587" width="343" height="60"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="c6x-TI-K0b"/>
@@ -231,28 +217,25 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="handleStartPauseResumeTapped" destination="SHz-c9-6Uc" eventType="primaryActionTriggered" id="GlW-w8-bIk"/>
+                                    <action selector="handleStartStopTapped" destination="SHz-c9-6Uc" eventType="touchUpInside" id="sfq-Q9-M7A"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="gNz-CM-8Hv" customClass="DetailView" customModule="InfinityTracker" customModuleProvider="target">
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="gNz-CM-8Hv" customClass="DetailView" customModule="FitnessTrackerTwo" customModuleProvider="target">
                                 <rect key="frame" x="16" y="467" width="343" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="lIx-ce-8MX" secondAttribute="trailing" id="7JQ-dF-7DR"/>
-                            <constraint firstItem="lIx-ce-8MX" firstAttribute="top" secondItem="gNz-CM-8Hv" secondAttribute="bottom" constant="20" id="BOJ-AH-fEV"/>
                             <constraint firstItem="gNz-CM-8Hv" firstAttribute="leading" secondItem="EN4-U5-yty" secondAttribute="leadingMargin" id="CTZ-yK-UL5"/>
                             <constraint firstItem="9BG-J0-h10" firstAttribute="trailing" secondItem="2GN-0I-X3K" secondAttribute="trailing" id="GRo-dd-2VS"/>
+                            <constraint firstItem="gNz-CM-8Hv" firstAttribute="trailing" secondItem="mq6-tB-9ZQ" secondAttribute="trailing" id="Hf8-mT-gFP"/>
                             <constraint firstItem="2GN-0I-X3K" firstAttribute="leading" secondItem="9BG-J0-h10" secondAttribute="leading" id="T5a-kx-ApS"/>
-                            <constraint firstItem="lIx-ce-8MX" firstAttribute="width" secondItem="mq6-tB-9ZQ" secondAttribute="width" id="aJq-ts-MJd"/>
-                            <constraint firstItem="9BG-J0-h10" firstAttribute="bottom" secondItem="lIx-ce-8MX" secondAttribute="bottom" constant="20" id="dTE-jU-s8C"/>
                             <constraint firstItem="9BG-J0-h10" firstAttribute="bottom" secondItem="mq6-tB-9ZQ" secondAttribute="bottom" constant="20" id="gsQ-JX-hn6"/>
                             <constraint firstItem="mq6-tB-9ZQ" firstAttribute="leading" secondItem="EN4-U5-yty" secondAttribute="leadingMargin" id="j56-sR-ZTB"/>
+                            <constraint firstItem="mq6-tB-9ZQ" firstAttribute="top" secondItem="gNz-CM-8Hv" secondAttribute="bottom" constant="20" id="jYX-d0-Gsi"/>
                             <constraint firstItem="gNz-CM-8Hv" firstAttribute="trailing" secondItem="EN4-U5-yty" secondAttribute="trailingMargin" id="k0v-lg-P1M"/>
                             <constraint firstItem="2GN-0I-X3K" firstAttribute="top" secondItem="9BG-J0-h10" secondAttribute="top" id="nFJ-qk-Pvq"/>
-                            <constraint firstItem="lIx-ce-8MX" firstAttribute="leading" secondItem="mq6-tB-9ZQ" secondAttribute="trailing" constant="20" id="sfn-G9-NdV"/>
                             <constraint firstItem="UUN-9p-riM" firstAttribute="top" secondItem="9BG-J0-h10" secondAttribute="top" constant="10" id="u0L-VN-ukW"/>
                             <constraint firstItem="9BG-J0-h10" firstAttribute="trailing" secondItem="UUN-9p-riM" secondAttribute="trailing" constant="10" id="xoK-vE-FpD"/>
                             <constraint firstAttribute="bottom" secondItem="2GN-0I-X3K" secondAttribute="bottom" id="zcy-zr-e8Z"/>
@@ -266,13 +249,12 @@
                         <outlet property="slider" destination="UHy-RL-tVu" id="6Is-TO-NuW"/>
                         <outlet property="sliderBackground" destination="UUN-9p-riM" id="NkY-Mr-lWV"/>
                         <outlet property="startButton" destination="mq6-tB-9ZQ" id="0Om-Yn-ujp"/>
-                        <outlet property="stopButton" destination="lIx-ce-8MX" id="rfX-Ei-1wn"/>
                         <segue destination="g1G-kC-zeZ" kind="presentation" identifier="RunDetailController" id="2ra-di-7Jb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbK-HA-pQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5436" y="14"/>
+            <point key="canvasLocation" x="5436" y="13.943028485757123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rfU-Hg-igK">
@@ -316,13 +298,13 @@
         <!--Past Workouts-->
         <scene sceneID="GcD-CL-ywu">
             <objects>
-                <tableViewController id="WdQ-3Y-MJo" customClass="PastRunsListController" customModule="InfinityTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="WdQ-3Y-MJo" customClass="PastRunsListController" customModule="FitnessTrackerTwo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="VCd-3g-3gR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RunTableCell" id="Ngl-z7-MHY" customClass="RunTableCell" customModule="InfinityTracker" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RunTableCell" id="Ngl-z7-MHY" customClass="RunTableCell" customModule="FitnessTrackerTwo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ngl-z7-MHY" id="raR-0i-XHk">
@@ -372,39 +354,6 @@
                                     <segue destination="BWu-8Z-jNk" kind="show" identifier="PastTrackDetailSegueIdentifier" id="qTK-as-LHc"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="loadMore" id="Jqj-fW-eVL" customClass="LoadMoreCell" customModule="InfinityTracker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jqj-fW-eVL" id="WLc-E2-YYg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="TI1-8Q-1IF">
-                                            <rect key="frame" x="137" y="6" width="101" height="32"/>
-                                            <subviews>
-                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="L0k-hd-ziS">
-                                                    <rect key="frame" x="0.0" y="6" width="20" height="20"/>
-                                                    <color key="color" name="Orange Light"/>
-                                                </activityIndicatorView>
-                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpO-F5-ZYg">
-                                                    <rect key="frame" x="24" y="0.0" width="77" height="32"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="tintColor" name="Orange Dark"/>
-                                                    <state key="normal" title="Load More"/>
-                                                </button>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="TI1-8Q-1IF" firstAttribute="centerX" secondItem="WLc-E2-YYg" secondAttribute="centerX" id="CIu-rW-f3E"/>
-                                        <constraint firstItem="TI1-8Q-1IF" firstAttribute="centerY" secondItem="WLc-E2-YYg" secondAttribute="centerY" id="alz-HL-v6f"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="loadBtn" destination="lpO-F5-ZYg" id="OrA-7f-yu5"/>
-                                    <outlet property="loadIndicator" destination="L0k-hd-ziS" id="OKg-K8-h2k"/>
-                                </connections>
-                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="WdQ-3Y-MJo" id="9f8-vQ-ZZQ"/>
@@ -423,7 +372,7 @@
         <!--[Track Date]-->
         <scene sceneID="Fe7-9p-C93">
             <objects>
-                <viewController id="BWu-8Z-jNk" customClass="RunDetailController" customModule="InfinityTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BWu-8Z-jNk" customClass="RunDetailController" customModule="FitnessTrackerTwo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ALr-ZD-thO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -431,7 +380,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" mapType="standard" pitchEnabled="NO" showsBuildings="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxa-w4-U9p">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="Lcf-ai-XRU" customClass="DetailView" customModule="InfinityTracker" customModuleProvider="target">
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="Lcf-ai-XRU" customClass="DetailView" customModule="FitnessTrackerTwo" customModuleProvider="target">
                                 <rect key="frame" x="16" y="547" width="343" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -460,14 +409,8 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="Orange Dark">
-            <color red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Orange Detail">
             <color red="1" green="0.49411764705882355" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Orange Light">
-            <color red="0.9137254901960784" green="0.77254901960784317" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>

@@ -26,7 +26,6 @@ class DetailView: UIView {
 			for l in [nameLbl, dataLbl] {
 				l.translatesAutoresizingMaskIntoConstraints = false
 				l.setContentHuggingPriority(.required, for: .vertical)
-//                l.textColor = Appearance.detailsColor
 			}
 			
 			let stack = UIStackView(arrangedSubviews: [nameLbl, dataLbl])
@@ -107,5 +106,4 @@ class DetailView: UIView {
 		caloriesLbl.text = Appearance.format(calories: run?.totalCalories)
 		paceLbl.text = Appearance.format(pace: run?.currentPace ?? run?.pace)
 	}
-
 }

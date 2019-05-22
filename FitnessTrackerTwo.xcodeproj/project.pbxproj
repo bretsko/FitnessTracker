@@ -7,23 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0ADD97EA2292BD490052942C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD97E92292BD490052942C /* AppDelegate.swift */; };
-		0ADD97EC2292BD490052942C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD97EB2292BD490052942C /* ViewController.swift */; };
-		0ADD97EF2292BD490052942C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ADD97ED2292BD490052942C /* Main.storyboard */; };
 		0ADD97F22292BD490052942C /* FitnessTrackerTwo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD97F02292BD490052942C /* FitnessTrackerTwo.xcdatamodeld */; };
 		0ADD97F42292BD4A0052942C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ADD97F32292BD4A0052942C /* Assets.xcassets */; };
 		0ADD97F72292BD4A0052942C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ADD97F52292BD4A0052942C /* LaunchScreen.storyboard */; };
+		0ADD98042292BD620052942C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD97FF2292BD620052942C /* Date.swift */; };
+		0ADD98052292BD620052942C /* CLLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD98002292BD620052942C /* CLLocation.swift */; };
+		0ADD98062292BD620052942C /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD98012292BD620052942C /* Protocols.swift */; };
+		0ADD98072292BD620052942C /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD98022292BD620052942C /* TimeInterval.swift */; };
+		0ADD98082292BD620052942C /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD98032292BD620052942C /* Appearance.swift */; };
+		0ADD980E2292BD6A0052942C /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD980A2292BD6A0052942C /* HomeController.swift */; };
+		0ADD980F2292BD6A0052942C /* PastRunsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD980B2292BD6A0052942C /* PastRunsListController.swift */; };
+		0ADD98102292BD6A0052942C /* NewRunController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD980C2292BD6A0052942C /* NewRunController.swift */; };
+		0ADD98112292BD6A0052942C /* RunDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD980D2292BD6A0052942C /* RunDetailController.swift */; };
+		0ADD98232292BD8A0052942C /* CompletedRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD981C2292BD8A0052942C /* CompletedRun.swift */; };
+		0ADD98242292BD8A0052942C /* RunBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD981D2292BD8A0052942C /* RunBuilder.swift */; };
+		0ADD98252292BD8A0052942C /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD981E2292BD8A0052942C /* Preferences.swift */; };
+		0ADD98262292BD8A0052942C /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD981F2292BD8A0052942C /* HealthKitManager.swift */; };
+		0ADD98272292BD8A0052942C /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD98202292BD8A0052942C /* Activity.swift */; };
+		0ADD98282292BD8A0052942C /* KeyValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD98212292BD8A0052942C /* KeyValueStore.swift */; };
+		0ADD98292292BD8A0052942C /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD98222292BD8A0052942C /* Run.swift */; };
+		0ADD98302292BD940052942C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD982B2292BD940052942C /* DetailView.swift */; };
+		0ADD98312292BD940052942C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ADD982C2292BD940052942C /* Main.storyboard */; };
+		0ADD98332292BD940052942C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD982E2292BD940052942C /* AppDelegate.swift */; };
+		0ADD98342292BD940052942C /* RunTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD982F2292BD940052942C /* RunTableCell.swift */; };
+		0ADD98392292BE470052942C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADD98382292BE470052942C /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0ADD97E62292BD490052942C /* FitnessTrackerTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessTrackerTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0ADD97E92292BD490052942C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0ADD97EB2292BD490052942C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0ADD97EE2292BD490052942C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0ADD97F12292BD490052942C /* FitnessTrackerTwo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FitnessTrackerTwo.xcdatamodel; sourceTree = "<group>"; };
 		0ADD97F32292BD4A0052942C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0ADD97F62292BD4A0052942C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0ADD97F82292BD4A0052942C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ADD97FF2292BD620052942C /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		0ADD98002292BD620052942C /* CLLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocation.swift; sourceTree = "<group>"; };
+		0ADD98012292BD620052942C /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		0ADD98022292BD620052942C /* TimeInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
+		0ADD98032292BD620052942C /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		0ADD980A2292BD6A0052942C /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		0ADD980B2292BD6A0052942C /* PastRunsListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastRunsListController.swift; sourceTree = "<group>"; };
+		0ADD980C2292BD6A0052942C /* NewRunController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRunController.swift; sourceTree = "<group>"; };
+		0ADD980D2292BD6A0052942C /* RunDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunDetailController.swift; sourceTree = "<group>"; };
+		0ADD981C2292BD8A0052942C /* CompletedRun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedRun.swift; sourceTree = "<group>"; };
+		0ADD981D2292BD8A0052942C /* RunBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunBuilder.swift; sourceTree = "<group>"; };
+		0ADD981E2292BD8A0052942C /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		0ADD981F2292BD8A0052942C /* HealthKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		0ADD98202292BD8A0052942C /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		0ADD98212292BD8A0052942C /* KeyValueStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueStore.swift; sourceTree = "<group>"; };
+		0ADD98222292BD8A0052942C /* Run.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
+		0ADD982B2292BD940052942C /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		0ADD982C2292BD940052942C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0ADD982E2292BD940052942C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0ADD982F2292BD940052942C /* RunTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunTableCell.swift; sourceTree = "<group>"; };
+		0ADD98382292BE470052942C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		0ADD983A2292BE470052942C /* FitnessTrackerTwo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FitnessTrackerTwo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ADD98392292BE470052942C /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +80,7 @@
 			children = (
 				0ADD97E82292BD490052942C /* FitnessTrackerTwo */,
 				0ADD97E72292BD490052942C /* Products */,
+				0ADD98372292BE470052942C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +95,73 @@
 		0ADD97E82292BD490052942C /* FitnessTrackerTwo */ = {
 			isa = PBXGroup;
 			children = (
-				0ADD97E92292BD490052942C /* AppDelegate.swift */,
-				0ADD97EB2292BD490052942C /* ViewController.swift */,
-				0ADD97ED2292BD490052942C /* Main.storyboard */,
+				0ADD97FE2292BD620052942C /* Helper */,
+				0ADD98092292BD6A0052942C /* Controller */,
+				0ADD981B2292BD8A0052942C /* Model */,
+				0ADD982A2292BD940052942C /* View */,
 				0ADD97F32292BD4A0052942C /* Assets.xcassets */,
 				0ADD97F52292BD4A0052942C /* LaunchScreen.storyboard */,
 				0ADD97F82292BD4A0052942C /* Info.plist */,
+				0ADD983A2292BE470052942C /* FitnessTrackerTwo.entitlements */,
 				0ADD97F02292BD490052942C /* FitnessTrackerTwo.xcdatamodeld */,
 			);
 			path = FitnessTrackerTwo;
+			sourceTree = "<group>";
+		};
+		0ADD97FE2292BD620052942C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0ADD97FF2292BD620052942C /* Date.swift */,
+				0ADD98002292BD620052942C /* CLLocation.swift */,
+				0ADD98012292BD620052942C /* Protocols.swift */,
+				0ADD98022292BD620052942C /* TimeInterval.swift */,
+				0ADD98032292BD620052942C /* Appearance.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		0ADD98092292BD6A0052942C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0ADD980A2292BD6A0052942C /* HomeController.swift */,
+				0ADD980B2292BD6A0052942C /* PastRunsListController.swift */,
+				0ADD980C2292BD6A0052942C /* NewRunController.swift */,
+				0ADD980D2292BD6A0052942C /* RunDetailController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0ADD981B2292BD8A0052942C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0ADD981C2292BD8A0052942C /* CompletedRun.swift */,
+				0ADD981D2292BD8A0052942C /* RunBuilder.swift */,
+				0ADD981E2292BD8A0052942C /* Preferences.swift */,
+				0ADD981F2292BD8A0052942C /* HealthKitManager.swift */,
+				0ADD98202292BD8A0052942C /* Activity.swift */,
+				0ADD98212292BD8A0052942C /* KeyValueStore.swift */,
+				0ADD98222292BD8A0052942C /* Run.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0ADD982A2292BD940052942C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0ADD982B2292BD940052942C /* DetailView.swift */,
+				0ADD982C2292BD940052942C /* Main.storyboard */,
+				0ADD982E2292BD940052942C /* AppDelegate.swift */,
+				0ADD982F2292BD940052942C /* RunTableCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0ADD98372292BE470052942C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0ADD98382292BE470052942C /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +196,11 @@
 				TargetAttributes = {
 					0ADD97E52292BD490052942C = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -127,7 +229,7 @@
 			files = (
 				0ADD97F72292BD4A0052942C /* LaunchScreen.storyboard in Resources */,
 				0ADD97F42292BD4A0052942C /* Assets.xcassets in Resources */,
-				0ADD97EF2292BD490052942C /* Main.storyboard in Resources */,
+				0ADD98312292BD940052942C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +240,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ADD98332292BD940052942C /* AppDelegate.swift in Sources */,
+				0ADD98272292BD8A0052942C /* Activity.swift in Sources */,
+				0ADD98112292BD6A0052942C /* RunDetailController.swift in Sources */,
+				0ADD98342292BD940052942C /* RunTableCell.swift in Sources */,
+				0ADD98072292BD620052942C /* TimeInterval.swift in Sources */,
+				0ADD98252292BD8A0052942C /* Preferences.swift in Sources */,
+				0ADD98052292BD620052942C /* CLLocation.swift in Sources */,
+				0ADD98242292BD8A0052942C /* RunBuilder.swift in Sources */,
 				0ADD97F22292BD490052942C /* FitnessTrackerTwo.xcdatamodeld in Sources */,
-				0ADD97EC2292BD490052942C /* ViewController.swift in Sources */,
-				0ADD97EA2292BD490052942C /* AppDelegate.swift in Sources */,
+				0ADD98082292BD620052942C /* Appearance.swift in Sources */,
+				0ADD98102292BD6A0052942C /* NewRunController.swift in Sources */,
+				0ADD98232292BD8A0052942C /* CompletedRun.swift in Sources */,
+				0ADD98262292BD8A0052942C /* HealthKitManager.swift in Sources */,
+				0ADD980F2292BD6A0052942C /* PastRunsListController.swift in Sources */,
+				0ADD98302292BD940052942C /* DetailView.swift in Sources */,
+				0ADD980E2292BD6A0052942C /* HomeController.swift in Sources */,
+				0ADD98062292BD620052942C /* Protocols.swift in Sources */,
+				0ADD98042292BD620052942C /* Date.swift in Sources */,
+				0ADD98292292BD8A0052942C /* Run.swift in Sources */,
+				0ADD98282292BD8A0052942C /* KeyValueStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0ADD97ED2292BD490052942C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0ADD97EE2292BD490052942C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0ADD97F52292BD4A0052942C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -286,6 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FitnessTrackerTwo/FitnessTrackerTwo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NQK83W3X27;
 				INFOPLIST_FILE = FitnessTrackerTwo/Info.plist;
@@ -304,6 +416,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FitnessTrackerTwo/FitnessTrackerTwo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NQK83W3X27;
 				INFOPLIST_FILE = FitnessTrackerTwo/Info.plist;

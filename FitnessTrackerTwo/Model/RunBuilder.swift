@@ -25,9 +25,6 @@ class RunBuilder {
 	}
 	private let rawRun: InProgressRun
 	private let activityType: Activity
-	var paused: Bool {
-		return rawRun.paused
-	}
 	private(set) var completed = false
 	private(set) var invalidated = false
 	
@@ -70,36 +67,8 @@ class RunBuilder {
 		self.activityType = activityType
 	}
 	
-	func pause(_ date: Date) {
-		guard rawRun.setPaused(true, date: date) else {
-			return
-		}
-		
-		flushDetails()
-		rawRun.currentPace = 0
-	}
-	
-	func resume(_ date: Date) -> [MKPolyline] {
-		guard rawRun.setPaused(false, date: date) else {
-			return []
-		}
-		
-		if let cur = lastCurrentLocation {
-			// Set the previous position to nil so a new separate track is started
-			previousLocation = nil
-			return add(locations: [cur])
-		}
-		
-		return []
-	}
-	
 	func add(locations: [CLLocation]) -> [MKPolyline] {
 		precondition(!invalidated, "This run builder has completed his job")
-		
-		guard !paused else {
-			lastCurrentLocation = locations.last
-			return []
-		}
 		
 		var polylines = [MKPolyline]()
 		var smoothLocations: [CLLocation] = []
@@ -374,9 +343,7 @@ fileprivate class InProgressRun: Run {
 	
 	var currentPace: TimeInterval? = 0
 	
-	var paused: Bool {
-		return (workoutEvents.last?.type ?? .resume) == .pause
-	}
+	
 	
 	var route: [MKPolyline] = []
 	var startPosition: MKPointAnnotation?
@@ -387,18 +354,6 @@ fileprivate class InProgressRun: Run {
 	fileprivate init(type: Activity, start: Date) {
 		self.type = type
 		self.start = start
-	}
-	
-	/// Create an appropriate event for the run. Setting the pause state to the current state will do nothing.
-	/// - returns: Whether the requested event has been added.
-	func setPaused(_ paused: Bool, date: Date) -> Bool {
-		guard self.paused != paused else {
-			return false
-		}
-		
-		workoutEvents.append(HKWorkoutEvent(type: paused ? .pause : .resume, dateInterval: DateInterval(start: date, duration: 0), metadata: nil))
-		
-		return true
 	}
 	
 }
