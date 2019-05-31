@@ -31,8 +31,19 @@
 		0ADD98332292BD940052942C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD982E2292BD940052942C /* AppDelegate.swift */; };
 		0ADD98342292BD940052942C /* RunTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD982F2292BD940052942C /* RunTableCell.swift */; };
 		0ADD98392292BE470052942C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADD98382292BE470052942C /* HealthKit.framework */; };
+		0ADD992F229C1C060052942C /* FitnessTrackerTwoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD992E229C1C060052942C /* FitnessTrackerTwoTests.swift */; };
 		6F1D9541A622D8C1F2D736B1 /* Pods_FitnessTrackerTwo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F6277C4C39B5FF136374AFF /* Pods_FitnessTrackerTwo.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0ADD9931229C1C060052942C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0ADD97DE2292BD490052942C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ADD97E52292BD490052942C;
+			remoteInfo = FitnessTrackerTwo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0ADD97E62292BD490052942C /* FitnessTrackerTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessTrackerTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +73,9 @@
 		0ADD982F2292BD940052942C /* RunTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunTableCell.swift; sourceTree = "<group>"; };
 		0ADD98382292BE470052942C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		0ADD983A2292BE470052942C /* FitnessTrackerTwo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FitnessTrackerTwo.entitlements; sourceTree = "<group>"; };
+		0ADD992C229C1C060052942C /* FitnessTrackerTwoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessTrackerTwoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ADD992E229C1C060052942C /* FitnessTrackerTwoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessTrackerTwoTests.swift; sourceTree = "<group>"; };
+		0ADD9930229C1C060052942C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CC077ED8A439CBE5D7E46E8 /* Pods-FitnessTrackerTwo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessTrackerTwo.debug.xcconfig"; path = "Target Support Files/Pods-FitnessTrackerTwo/Pods-FitnessTrackerTwo.debug.xcconfig"; sourceTree = "<group>"; };
 		5F6277C4C39B5FF136374AFF /* Pods_FitnessTrackerTwo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitnessTrackerTwo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4903B4F7ECAFEB6EE2B778C /* Pods-FitnessTrackerTwo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessTrackerTwo.release.xcconfig"; path = "Target Support Files/Pods-FitnessTrackerTwo/Pods-FitnessTrackerTwo.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +91,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0ADD9929229C1C060052942C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -84,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				0ADD97E82292BD490052942C /* FitnessTrackerTwo */,
+				0ADD992D229C1C060052942C /* FitnessTrackerTwoTests */,
 				0ADD97E72292BD490052942C /* Products */,
 				0ADD98372292BE470052942C /* Frameworks */,
 				1FD3D9288B3BD69D7E9AF928 /* Pods */,
@@ -94,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				0ADD97E62292BD490052942C /* FitnessTrackerTwo.app */,
+				0ADD992C229C1C060052942C /* FitnessTrackerTwoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,13 +194,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0ADD992D229C1C060052942C /* FitnessTrackerTwoTests */ = {
+			isa = PBXGroup;
+			children = (
+				0ADD992E229C1C060052942C /* FitnessTrackerTwoTests.swift */,
+				0ADD9930229C1C060052942C /* Info.plist */,
+			);
+			path = FitnessTrackerTwoTests;
+			sourceTree = "<group>";
+		};
 		1FD3D9288B3BD69D7E9AF928 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				5CC077ED8A439CBE5D7E46E8 /* Pods-FitnessTrackerTwo.debug.xcconfig */,
 				E4903B4F7ECAFEB6EE2B778C /* Pods-FitnessTrackerTwo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -202,6 +233,24 @@
 			productReference = 0ADD97E62292BD490052942C /* FitnessTrackerTwo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		0ADD992B229C1C060052942C /* FitnessTrackerTwoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ADD9935229C1C060052942C /* Build configuration list for PBXNativeTarget "FitnessTrackerTwoTests" */;
+			buildPhases = (
+				0ADD9928229C1C060052942C /* Sources */,
+				0ADD9929229C1C060052942C /* Frameworks */,
+				0ADD992A229C1C060052942C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0ADD9932229C1C060052942C /* PBXTargetDependency */,
+			);
+			name = FitnessTrackerTwoTests;
+			productName = FitnessTrackerTwoTests;
+			productReference = 0ADD992C229C1C060052942C /* FitnessTrackerTwoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -220,6 +269,10 @@
 							};
 						};
 					};
+					0ADD992B229C1C060052942C = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 0ADD97E52292BD490052942C;
+					};
 				};
 			};
 			buildConfigurationList = 0ADD97E12292BD490052942C /* Build configuration list for PBXProject "FitnessTrackerTwo" */;
@@ -236,6 +289,7 @@
 			projectRoot = "";
 			targets = (
 				0ADD97E52292BD490052942C /* FitnessTrackerTwo */,
+				0ADD992B229C1C060052942C /* FitnessTrackerTwoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -248,6 +302,13 @@
 				0ADD97F72292BD4A0052942C /* LaunchScreen.storyboard in Resources */,
 				0ADD97F42292BD4A0052942C /* Assets.xcassets in Resources */,
 				0ADD98312292BD940052942C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ADD992A229C1C060052942C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +367,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0ADD9928229C1C060052942C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ADD992F229C1C060052942C /* FitnessTrackerTwoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0ADD9932229C1C060052942C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ADD97E52292BD490052942C /* FitnessTrackerTwo */;
+			targetProxy = 0ADD9931229C1C060052942C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0ADD97F52292BD4A0052942C /* LaunchScreen.storyboard */ = {
@@ -476,6 +553,46 @@
 			};
 			name = Release;
 		};
+		0ADD9933229C1C060052942C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NQK83W3X27;
+				INFOPLIST_FILE = FitnessTrackerTwoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.azisisa.FitnessTrackerTwoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitnessTrackerTwo.app/FitnessTrackerTwo";
+			};
+			name = Debug;
+		};
+		0ADD9934229C1C060052942C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NQK83W3X27;
+				INFOPLIST_FILE = FitnessTrackerTwoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.azisisa.FitnessTrackerTwoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FitnessTrackerTwo.app/FitnessTrackerTwo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -493,6 +610,15 @@
 			buildConfigurations = (
 				0ADD97FC2292BD4A0052942C /* Debug */,
 				0ADD97FD2292BD4A0052942C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0ADD9935229C1C060052942C /* Build configuration list for PBXNativeTarget "FitnessTrackerTwoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ADD9933229C1C060052942C /* Debug */,
+				0ADD9934229C1C060052942C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

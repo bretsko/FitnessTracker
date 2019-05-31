@@ -19,32 +19,32 @@ class NewRunController: UIViewController {
 	
 	// MARK: Private Properties
 	
-	private var weight: HKQuantity?
-	private var timer: Timer?
-	private var run: RunBuilder! {
+    var weight: HKQuantity?
+    var timer: Timer?
+    var run: RunBuilder! {
 		willSet {
 			precondition(run == nil, "Cannot start multiple runs")
 		}
 	}
-	private let locationManager = CLLocationManager()
+    let locationManager = CLLocationManager()
 	
 	/// The last registered position when the workout was not yet started or paused
-	private var previousLocation: CLLocation?
+    var previousLocation: CLLocation?
 	
-	private var mapDelta: Double = 0.0050
+    var mapDelta: Double = 0.0050
 	
-	private var didStart: Bool {
+    var didStart: Bool {
 		return run != nil
 	}
-	private var didEnd: Bool {
+    var didEnd: Bool {
 		return run?.invalidated ?? false
 	}
-	private var cannotSaveAlertDisplayed = false
+    var cannotSaveAlertDisplayed = false
 	
 	// MARK: Delegates
 	
 	weak var newRunDismissDelegate: DismissDelegate?
-	private let mapViewDelegate = Appearance()
+    let mapViewDelegate = Appearance()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -149,7 +149,7 @@ class NewRunController: UIViewController {
 		manualStop()
 	}
 	
-	private func stopRun() {
+    func stopRun() {
 		locationManager.stopUpdatingLocation()
 	}
 	
@@ -174,7 +174,7 @@ class NewRunController: UIViewController {
 		mapView.showsBuildings = true
 	}
 	
-	private func startUpdatingLocations() {
+    func startUpdatingLocations() {
 		locationManager.delegate = self
 		locationManager.activityType = .fitness
 		locationManager.desiredAccuracy = kCLLocationAccuracyBest

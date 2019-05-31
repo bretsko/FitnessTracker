@@ -19,8 +19,8 @@ fileprivate enum PreferenceKeys: String, KeyValueStoreKey {
 
 class Preferences {
 	
-	private static let appSpecific = KeyValueStore(userDefaults: UserDefaults.standard)
-	private init() {}
+    static let appSpecific = KeyValueStore(userDefaults: UserDefaults.standard)
+    init() {}
 	
 	static var reviewRequestThreshold: Int {
 		return 3

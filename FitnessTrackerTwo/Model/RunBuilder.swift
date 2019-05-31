@@ -29,12 +29,12 @@ class RunBuilder {
 	private(set) var invalidated = false
 	
 	/// Weight for calories calculation, in kg.
-	private let weight: Double
+    let weight: Double
 	
 	/// The last location added to the builder. This location can be either processed is the workout is running or raw if added while paused.
-	private var lastCurrentLocation: CLLocation?
+    var lastCurrentLocation: CLLocation?
 	/// The previous logical location processed.
-	private var previousLocation: CLLocation? {
+    var previousLocation: CLLocation? {
 		didSet {
 			lastCurrentLocation = previousLocation
 		}
@@ -349,9 +349,9 @@ fileprivate class InProgressRun: Run {
 	var startPosition: MKPointAnnotation?
 	var endPosition: MKPointAnnotation?
 	
-	private(set) var realEnd: Date?
+	var realEnd: Date?
 	
-	fileprivate init(type: Activity, start: Date) {
+	init(type: Activity, start: Date) {
 		self.type = type
 		self.start = start
 	}

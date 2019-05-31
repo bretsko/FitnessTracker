@@ -11,15 +11,15 @@ class HomeController: UIViewController {
 	@IBOutlet weak var newRunButton: UIButton!
 	@IBOutlet weak var changeActivityLbl: UILabel!
 	
-	private let newRunSegueIdentifier = "NewRunSegueIdentifier"
-	private var activityType = Preferences.activityType
+    let newRunSegueIdentifier = "NewRunSegueIdentifier"
+    var activityType = Preferences.activityType
 	
-	private var locationEnabled = false
-	private var locManager: CLLocationManager!
+    var locationEnabled = false
+    var locManager: CLLocationManager!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+
 		updateNewRunButton()
 	}
 	
@@ -55,8 +55,8 @@ class HomeController: UIViewController {
 				if locManager == nil {
 					DispatchQueue.main.async {
 						self.locManager = CLLocationManager()
-						self.locManager.delegate = self
-						self.locManager.requestWhenInUseAuthorization()
+                        self.locManager.delegate = self
+                        self.locManager.requestWhenInUseAuthorization()
 					}
 				}
 				fallthrough
@@ -76,7 +76,7 @@ class HomeController: UIViewController {
 	
 	// MARK: - UI Management
 	
-	private func setupViews() {
+    func setupViews() {
 		
 		newRunButton.layer.masksToBounds = true
 		newRunButton.layer.cornerRadius = newRunButton.frame.height/2
@@ -94,7 +94,7 @@ class HomeController: UIViewController {
 	}
 
 	
-	private func updateNewRunButton() {
+    func updateNewRunButton() {
 		newRunButton.setTitle("New \(activityType.localizable)", for: [])
 		changeActivityLbl.text = "Long press to track \(activityType.nextActivity.localizable)"
 	}
@@ -162,7 +162,7 @@ extension HomeController: CLLocationManagerDelegate {
 		
 		self.locationEnabled = status == .authorizedAlways || status == .authorizedWhenInUse
 		self.setupViews()
-		self.locManager = nil
-	}	
+        self.locManager = nil
+	}
 }
 
