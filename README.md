@@ -1,1 +1,1 @@
-# FitnessTracker
+# RunTracker
