@@ -1,11 +1,10 @@
 
 
-import UIKit
+//import UIKit
 import MapKit
 
 /// Contains all constants representing the appearance of the app. An instance can be used as `MKMapViewDelegate` to uniform the appearance of the maps.
 class Appearance: NSObject, MKMapViewDelegate {
-	
 	
 	// MARK: - Formatting
 	
@@ -36,9 +35,12 @@ class Appearance: NSObject, MKMapViewDelegate {
 	/// Format a distance in kilometers.
 	/// - parameter distance: The distance to format, in meters.
 	/// - parameter addUnit: Whether or not to add the unit, i.e. `km`.
-	static func format(distance: Double?, addUnit: Bool = true) -> String {
+	static func format(distance: Double,
+                       addUnit: Bool = true) -> String {
+        
 		let num: String
-		if let raw = distanceF.string(from: NSNumber(value: (distance ?? 0) / 1000)) {
+        
+		if let raw = distanceF.string(from: NSNumber(value: distance / 1000)) {
 			num = raw
 		} else {
 			num = missingNumber
@@ -56,7 +58,8 @@ class Appearance: NSObject, MKMapViewDelegate {
 	/// Format burned calories in kilocalories.
 	/// - parameter calories: The calories to format, in kilocalories.
 	/// - parameter addUnit: Whether or not to add the unit, i.e. `kcal`.
-	static func format(calories: Double?, addUnit: Bool = true) -> String {
+	static func format(calories: Double?,
+                       addUnit: Bool = true) -> String {
 		let num: String
 		if let raw = caloriesF.string(from: NSNumber(value: calories ?? 0)) {
 			num = raw
@@ -70,7 +73,7 @@ class Appearance: NSObject, MKMapViewDelegate {
 	/// Format a pace in hours, minutes and seconds per kilometer.
 	/// - parameter pace: The pace to format, in seconds per kilometer.
 	static func format(pace: Double?) -> String {
-		return (pace ?? 0).getDuration(hideHours: true) + "/km"
+		return (pace ?? 0).getDuration(shouldHideHours: true) + "/km"
 	}
 	
 	/// Format a weight in kilograms.
@@ -97,7 +100,8 @@ class Appearance: NSObject, MKMapViewDelegate {
 		map.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: pinIdentifier)
 	}
 	
-	func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+	func mapView(_ mapView: MKMapView,
+                 rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
 		if overlay is MKPolyline {
 			let polylineRenderer = MKPolylineRenderer(overlay: overlay)
 			polylineRenderer.strokeColor = UIColor.blue
@@ -108,16 +112,22 @@ class Appearance: NSObject, MKMapViewDelegate {
 		return MKPolylineRenderer()
 	}
 	
-	func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+	func mapView(_ mapView: MKMapView,
+                 viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
 		var view: MKMarkerAnnotationView?
-		if let start = startPosition, start === annotation {
+		
+        if let start = startPosition,
+            start === annotation {
 			let ann = mapView.dequeueReusableAnnotationView(withIdentifier: pinIdentifier, for: annotation) as! MKMarkerAnnotationView
 			ann.markerTintColor = MKPinAnnotationView.greenPinColor()
 			
 			view = ann
 		}
 		
-		if let end = endPosition, end === annotation {
+		if let end = endPosition,
+            end === annotation {
+            
 			let ann = mapView.dequeueReusableAnnotationView(withIdentifier: pinIdentifier, for: annotation) as! MKMarkerAnnotationView
 			ann.markerTintColor = MKPinAnnotationView.redPinColor()
 			

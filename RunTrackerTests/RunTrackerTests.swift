@@ -13,13 +13,13 @@ import CoreLocation
 
 class FitnessTrackerTwoTests: XCTestCase {
     
-    var sut: HomeController!
-    var sut2: NewRunController!
+    var sut: HomeVC!
+    var sut2: CurrentRunVC!
     
     override func setUp() {
         super.setUp()
-        sut = HomeController()
-        sut2 = NewRunController()
+        sut = HomeVC()
+        sut2 = CurrentRunVC()
     }
     
     override func tearDown() {

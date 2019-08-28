@@ -3,7 +3,7 @@ import Foundation
 
 public extension TimeInterval {
     
-    func getDuration(hideHours shouldHide: Bool = false) -> String {
+    func getDuration(shouldHideHours: Bool = false) -> String {
         var s = self
         let neg = s < 0
         if neg {
@@ -15,7 +15,7 @@ public extension TimeInterval {
         
         let h = floor(m / 60)
         let min = Int(fmod(m, 60))
-        let doHide = shouldHide && h == 0
+        let doHide = shouldHideHours && h == 0
         
         var res = (sec < 10 ? "0" : "") + "\(sec)"
         res = (min < 10 && !doHide ? "0" : "") + "\(min):" + res

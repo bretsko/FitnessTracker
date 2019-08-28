@@ -1,0 +1,11 @@
+
+
+
+ib:
+  inputs: 
+    - RunTracker/View
+  outputs:
+    - templateName: scenes-swift4
+      output: RunTracker/Generated/Storyboard Scenes.swift
+    - templateName: segues-swift4
+      output: RunTracker/Generated/Storyboard Segues.swift

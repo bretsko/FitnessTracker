@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aDj-Kq-MJ8">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iG1-hz-v8x">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home Controller-->
+        <!--HomeVC-->
         <scene sceneID="R02-lz-uXg">
             <objects>
-                <viewController id="u7X-Os-Fjy" customClass="HomeController" customModule="FitnessTrackerTwo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="u7X-Os-Fjy" customClass="HomeVC" customModule="RunTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="exj-AN-ov9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4AQ-QS-sC3">
-                                <rect key="frame" x="152.5" y="170" width="70.5" height="20.5"/>
+                                <rect key="frame" x="172" y="194" width="70.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Twc-MB-njj" userLabel="Distance">
-                                <rect key="frame" x="108" y="206.5" width="159" height="50.5"/>
+                                <rect key="frame" x="127.5" y="230.5" width="159" height="50.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="2,783" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqQ-mu-yOC">
                                         <rect key="frame" x="0.0" y="0.0" width="113" height="50.5"/>
@@ -43,7 +40,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nIy-QE-Mj3" userLabel="Calories">
-                                <rect key="frame" x="104.5" y="265" width="166.5" height="64.5"/>
+                                <rect key="frame" x="124" y="289" width="166.5" height="64.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="1,248" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8IW-xK-CEY">
                                         <rect key="frame" x="0.0" y="7" width="109.5" height="50.5"/>
@@ -71,37 +68,37 @@
                                 </connections>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9U-vT-rCf" userLabel="Workout View">
-                                <rect key="frame" x="0.0" y="490" width="375" height="177"/>
+                                <rect key="frame" x="0.0" y="685" width="414" height="211"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4a-xm-Tob">
-                                        <rect key="frame" x="27.5" y="15" width="320" height="60"/>
+                                        <rect key="frame" x="27.5" y="15" width="359" height="60"/>
                                         <color key="backgroundColor" red="0.58221136890000003" green="0.50164488309999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="PpJ-IK-vo3"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <state key="normal" title="[New Run/Walk]">
+                                        <state key="normal" title="[New RunP/Walk]">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="newRunButtonClicked:" destination="u7X-Os-Fjy" eventType="touchUpInside" id="uRM-e9-6bd"/>
                                             <outletCollection property="gestureRecognizers" destination="IFD-hX-zr5" appends="YES" id="gfX-xx-uFV"/>
-                                            <segue destination="76d-dZ-KWj" kind="presentation" identifier="NewRunSegueIdentifier" modalTransitionStyle="flipHorizontal" id="gI5-eF-hQh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4S6-vD-jl5">
-                                        <rect key="frame" x="81.5" y="117" width="212" height="32"/>
+                                        <rect key="frame" x="101" y="117" width="212" height="32"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Check My Previous Workouts">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="WdQ-3Y-MJo" kind="show" identifier="RunListController" id="EK2-xJ-68N"/>
+                                            <action selector="checkRunHistoryButtonClicked:" destination="u7X-Os-Fjy" eventType="touchUpInside" id="KtY-0B-6AL"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Long press to toggle]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFh-lI-9pH">
-                                        <rect key="frame" x="134" y="90" width="107.5" height="12"/>
+                                        <rect key="frame" x="153.5" y="90" width="107.5" height="12"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -140,7 +137,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="caloriesLabel" destination="8IW-xK-CEY" id="8o9-Yd-HqQ"/>
-                        <outlet property="changeActivityLbl" destination="qFh-lI-9pH" id="2KM-wc-ZLU"/>
+                        <outlet property="changeActivityLabel" destination="qFh-lI-9pH" id="2KM-wc-ZLU"/>
                         <outlet property="distanceLabel" destination="NqQ-mu-yOC" id="7NF-GB-X5y"/>
                         <outlet property="newRunButton" destination="N4a-xm-Tob" id="Fpm-f5-aiJ"/>
                         <outlet property="runHistoryButton" destination="4S6-vD-jl5" id="JOY-O4-R7O"/>
@@ -154,43 +151,25 @@
                 </pongPressGestureRecognizer>
                 <tapGestureRecognizer id="WJH-li-KWH"/>
             </objects>
-            <point key="canvasLocation" x="3773.5999999999999" y="-547.37631184407803"/>
+            <point key="canvasLocation" x="4682.608695652174" y="-547.76785714285711"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="rgi-2D-iRb">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aDj-Kq-MJ8" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mz5-nt-vap">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="u7X-Os-Fjy" kind="relationship" relationship="rootViewController" id="avI-Sv-069"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NnR-HP-Nfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2970" y="-547"/>
-        </scene>
-        <!--New Run Controller-->
+        <!--Current RunVC-->
         <scene sceneID="j6b-q6-It7">
             <objects>
-                <viewController id="SHz-c9-6Uc" customClass="NewRunController" customModule="FitnessTrackerTwo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CurrentRunVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SHz-c9-6Uc" customClass="CurrentRunVC" customModule="RunTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EN4-U5-yty">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GN-0I-X3K">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUN-9p-riM" userLabel="Zoom Slider">
-                                <rect key="frame" x="205" y="74" width="160" height="48"/>
+                                <rect key="frame" x="244" y="54" width="160" height="48"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.55000001192092896" minValue="0.10000000149011612" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UHy-RL-tVu">
                                         <rect key="frame" x="14" y="5" width="133" height="39"/>
-                                        <color key="tintColor" name="Orange Detail"/>
+                                        <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="sliderDidChangeValue" destination="SHz-c9-6Uc" eventType="valueChanged" id="44p-eX-Shc"/>
                                         </connections>
@@ -207,7 +186,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mq6-tB-9ZQ">
-                                <rect key="frame" x="16" y="587" width="343" height="60"/>
+                                <rect key="frame" x="20" y="782" width="374" height="60"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="c6x-TI-K0b"/>
@@ -220,8 +199,8 @@
                                     <action selector="handleStartStopTapped" destination="SHz-c9-6Uc" eventType="touchUpInside" id="sfq-Q9-M7A"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="gNz-CM-8Hv" customClass="DetailView" customModule="FitnessTrackerTwo" customModuleProvider="target">
-                                <rect key="frame" x="16" y="467" width="343" height="100"/>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="gNz-CM-8Hv" customClass="LabelsStackView" customModule="RunTracker" customModuleProvider="target">
+                                <rect key="frame" x="20" y="662" width="374" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -249,78 +228,38 @@
                         <outlet property="slider" destination="UHy-RL-tVu" id="6Is-TO-NuW"/>
                         <outlet property="sliderBackground" destination="UUN-9p-riM" id="NkY-Mr-lWV"/>
                         <outlet property="startButton" destination="mq6-tB-9ZQ" id="0Om-Yn-ujp"/>
-                        <segue destination="g1G-kC-zeZ" kind="presentation" identifier="RunDetailController" id="2ra-di-7Jb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbK-HA-pQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5436" y="13.943028485757123"/>
+            <point key="canvasLocation" x="4721" y="174"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="rfU-Hg-igK">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="76d-dZ-KWj" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2h9-Xl-c3u">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="SHz-c9-6Uc" kind="relationship" relationship="rootViewController" id="Tpx-di-HfB"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e5y-td-fwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4660" y="14"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="cFs-L9-6t7">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g1G-kC-zeZ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hUZ-sQ-G2A">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="1" green="0.45515950519999998" blue="0.19390190970000001" alpha="1" colorSpace="calibratedRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BWu-8Z-jNk" kind="relationship" relationship="rootViewController" id="BGH-gN-Sl0"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j9b-7q-1P4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6249" y="13"/>
-        </scene>
-        <!--Past Workouts-->
+        <!--Run History-->
         <scene sceneID="GcD-CL-ywu">
             <objects>
-                <tableViewController id="WdQ-3Y-MJo" customClass="PastRunsListController" customModule="FitnessTrackerTwo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="RunHistoryVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WdQ-3Y-MJo" userLabel="Run History" customClass="RunHistoryVC" customModule="RunTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="VCd-3g-3gR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RunTableCell" id="Ngl-z7-MHY" customClass="RunTableCell" customModule="FitnessTrackerTwo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RunTableCell" id="Ngl-z7-MHY" customClass="RunTableCell" customModule="RunTracker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ngl-z7-MHY" id="raR-0i-XHk">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="382.5" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6Ja-te-aXF">
-                                            <rect key="frame" x="16" y="0.0" width="325" height="43.5"/>
+                                            <rect key="frame" x="20" y="0.0" width="362.5" height="44"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="XJU-1x-GHd">
-                                                    <rect key="frame" x="0.0" y="4.5" width="174.5" height="35"/>
+                                                    <rect key="frame" x="0.0" y="4.5" width="194.5" height="35"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOc-S6-1Fl">
                                                             <rect key="frame" x="0.0" y="0.0" width="43.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                            <color key="textColor" name="Orange Detail"/>
+                                                            <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5US-7j-vZg">
@@ -332,7 +271,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGM-oJ-l2y">
-                                                    <rect key="frame" x="174.5" y="13" width="150.5" height="18"/>
+                                                    <rect key="frame" x="194.5" y="13" width="168" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -348,10 +287,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="dateLbl" destination="5US-7j-vZg" id="ZAs-bK-DRk"/>
-                                    <outlet property="distanceLbl" destination="sGM-oJ-l2y" id="chT-U5-FxB"/>
-                                    <outlet property="nameLbl" destination="tOc-S6-1Fl" id="5xi-Ox-fSg"/>
-                                    <segue destination="BWu-8Z-jNk" kind="show" identifier="PastTrackDetailSegueIdentifier" id="qTK-as-LHc"/>
+                                    <outlet property="dateLabel" destination="5US-7j-vZg" id="ZAs-bK-DRk"/>
+                                    <outlet property="distanceLabel" destination="sGM-oJ-l2y" id="chT-U5-FxB"/>
+                                    <outlet property="nameLabel" destination="tOc-S6-1Fl" id="5xi-Ox-fSg"/>
+                                    <segue destination="BWu-8Z-jNk" kind="showDetail" id="FNU-87-TmM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -360,28 +299,28 @@
                             <outlet property="delegate" destination="WdQ-3Y-MJo" id="l4R-VM-EfY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Past Workouts" id="sgr-Te-P5z">
-                        <barButtonItem key="backBarButtonItem" title=" " id="VGf-xl-tmH"/>
+                    <navigationItem key="navigationItem" title="Run History" id="sgr-Te-P5z" userLabel="Run History">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="VGf-xl-tmH"/>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcP-8D-iut" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6249" y="-675"/>
+            <point key="canvasLocation" x="5668.115942028986" y="-533.03571428571422"/>
         </scene>
         <!--[Track Date]-->
         <scene sceneID="Fe7-9p-C93">
             <objects>
-                <viewController id="BWu-8Z-jNk" customClass="RunDetailController" customModule="FitnessTrackerTwo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompletedRunVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BWu-8Z-jNk" customClass="CompletedRunVC" customModule="RunTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ALr-ZD-thO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" mapType="standard" pitchEnabled="NO" showsBuildings="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxa-w4-U9p">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                             </mapView>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="Lcf-ai-XRU" customClass="DetailView" customModule="FitnessTrackerTwo" customModuleProvider="target">
-                                <rect key="frame" x="16" y="547" width="343" height="100"/>
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="Lcf-ai-XRU" customClass="LabelsStackView" customModule="RunTracker" customModuleProvider="target">
+                                <rect key="frame" x="20" y="654" width="374" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -397,7 +336,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HG9-BW-hNE"/>
                     </view>
-                    <navigationItem key="navigationItem" title="[Track Date]" id="irO-YM-7on"/>
+                    <navigationItem key="navigationItem" title="[Track Date]" id="2Vf-le-OzY">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="pru-HT-Fqh"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="details" destination="Lcf-ai-XRU" id="Xfh-PH-yp1"/>
                         <outlet property="mapView" destination="Kxa-w4-U9p" id="kmw-cE-gJF"/>
@@ -405,15 +347,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MeO-v4-AO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7162" y="-547"/>
+            <point key="canvasLocation" x="6511.594202898551" y="-547.09821428571422"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VJS-Rv-5RE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iG1-hz-v8x" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9r1-oS-OOX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="u7X-Os-Fjy" kind="relationship" relationship="rootViewController" id="LEI-4z-mLu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b3x-fG-0cP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3772.4637681159425" y="-547.76785714285711"/>
         </scene>
     </scenes>
-    <resources>
-        <namedColor name="Orange Detail">
-            <color red="1" green="0.49411764705882355" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-    </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="qTK-as-LHc"/>
-    </inferredMetricsTieBreakers>
 </document>
